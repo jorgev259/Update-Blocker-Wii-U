@@ -26,10 +26,12 @@ namespace ConsoleApplication1
                 switch (Console.ReadLine())
                 {
                     case "1":
+                        Console.Clear();
                         ftpRequest.Method = WebRequestMethods.Ftp.DeleteFile;
                         break;
 
                     case "2":
+                        Console.Clear();
                         ftpRequest.Method = WebRequestMethods.Ftp.MakeDirectory;
                         break;
 
@@ -45,6 +47,8 @@ namespace ConsoleApplication1
                 }
 
                 ftpRequest.GetResponse();
+                Console.Write("Press any key to continue. Behind this are the logs of the errors that ocurred");
+                Console.ReadKey();
             }
         }
     }
